@@ -21,6 +21,13 @@
         android:label="@string/home"
         tools:layout="@layout/home_fragment">
 
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/flow_step_one_dest"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
 
     <fragment
@@ -67,4 +74,9 @@
 
         <!-- TODO END STEP 11.1 -->
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.android.codelabs.navigation.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment" />
 </navigation>
