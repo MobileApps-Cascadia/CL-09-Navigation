@@ -24,6 +24,12 @@
     </fragment>
 
     <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.example.android.codelabs.navigation.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/settings_fragment" />
+
+    <fragment
         android:id="@+id/flow_step_one_dest"
         android:name="com.example.android.codelabs.navigation.FlowStepFragment"
         tools:layout="@layout/flow_step_one_fragment">

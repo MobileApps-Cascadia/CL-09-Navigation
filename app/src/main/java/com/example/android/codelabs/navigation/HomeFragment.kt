@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (C) 2018 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,6 +19,9 @@ package com.example.android.codelabs.navigation
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import android.widget.Button
 
 /**
  * Fragment used to show how to navigate to another destination
@@ -36,6 +39,12 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val button = view.findViewById<Button>(R.id.navigate_destination_button)
+        button?.setOnClickListener {
+            findNavController().navigate(R.id.flow_step_one_dest, null)
+        }
+
+
         //TODO STEP 5 - Set an OnClickListener, using Navigation.createNavigateOnClickListener()
 
         //TODO END STEP 5
@@ -45,6 +54,9 @@ class HomeFragment : Fragment() {
         //TODO END STEP 6
 
         //TODO STEP 7 - Update the OnClickListener to navigate using an action
+//        val button = view.findViewById<Buttton>(R.id.navigate_destination_button)
+//        button?.setOnclickListener {
+//            Navigation.createNavigateOnClickListener(R.id.flow_step_one_dest, null)
 
         //TODO END STEP 7
 
@@ -57,3 +69,7 @@ class HomeFragment : Fragment() {
         inflater.inflate(R.menu.main_menu, menu)
     }
 }
+
+
+
+
